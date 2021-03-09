@@ -22,3 +22,8 @@ function second() {
 //execution context environment where javascript is executed
 //javascript always runs inside execution context
 
+//one gloval execution context default context  not inside any function 
+//once global execution context executed functions executed and callbacks waited for
+//one execution contecxt per function all together make the call stack
+//inside execution context is cariables functions and arguments object
+//each function has own execution context
