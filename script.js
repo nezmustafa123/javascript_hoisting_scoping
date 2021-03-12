@@ -48,6 +48,8 @@ function second() {
 
 //building scope/scope chain
 
+//global scope only variable declartion
+//first function counts as variable in global scope too
 const myName = 'Nez';
 
 function first(){
@@ -56,13 +58,23 @@ function first(){
     
     if(age >= 30) {
         const decade = 3;
+        //only const is block scoped 
+        //var isn't block scoped so it's available in first function scope
+        //var is funciton scoped
         var millenial = true; 
-        
+        //the if scope has access to all variables in outer scopes
+        //if block dosn't get access to second functions scope
+        //same the other way around, inside first functions scope lexical
     }
     function second() {
         //second scope (function)
         const job = 'teacher';
-        
+        //variables not in current scope
+        //every scope has access to variabes of all outer scopes 
+        //can access variable defined in first function
+        //fist function accesses global scope so second function can access global scope too because first scope accesss globbal scope
+        //scope goes up not down
+        //also functions have access to function arguments in the outer scope
         console.log(`%{myName} is a ${age} year old ${job}`);
     }
     
@@ -70,3 +82,26 @@ function first(){
 }
 
 first();
+
+
+
+
+//call stack(order in which functions are called) one execution context for each functoin in order they are called
+//order in which fuctions are called doesn't matter to scope chain
+const a = 'Jonas';
+first();
+
+function first() {
+    const b = 'Hello!';
+    second();
+    
+    function second() {
+        const c = 'H1!';
+        third();
+    }
+}
+
+function third() {
+    const d = 'Hey!';
+    console.log(d + c + b + a);
+}
