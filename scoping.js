@@ -56,3 +56,34 @@ calcAge(1990);
 //code is scanned for variable declerations before it is executed 
 //function declarations added to variable environment object
 //use function declerations before declared in code
+//finctions are block scoped in strict mode
+//var variables are undefined when accessed before defining
+//let and const variables uninitialised when accessed before dlecared TDZ can't access between beginning of scope and place where it's declared
+//function expressions and arrow functions depends on whether they were created using var const and let
+//functions used with var hoisted to undefined ones with const and let hoisted to uninitialised because of temporal dead zone
+
+
+const myName = 'Nez';
+
+if(myName === 'Jonas') {
+    console.log('Nez is a ${job}');
+    const age = = 2037 - 1990;
+    console.log(age);
+    
+    //temporal dead zone reigion of scope where variable is defined buy can't be used
+    const job = 'professional prick';
+    console.log(x);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
