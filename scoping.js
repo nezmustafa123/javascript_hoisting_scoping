@@ -65,25 +65,50 @@ calcAge(1990);
 
 const myName = 'Nez';
 
-if(myName === 'Jonas') {
+if(myName === 'Nez') {
     console.log('Nez is a ${job}');
     const age = = 2037 - 1990;
     console.log(age);
     
-    //temporal dead zone reigion of scope where variable is defined buy can't be used
+    //temporal dead zone reigion  of scope where variable is defined buy can't be used
     const job = 'professional prick';
     console.log(x);
 }
 
 
 
+//hoisting with variables
+
+
+console.log(me); //undefined
+consoel.log(job);//tdz starts here
+console.log(year); //uninitialised
+
+
+var me = 'Nez';
+let job = 'teacher';
+const year = 1991;
 
 
 
+//hoisting with functions
 
+console.log(addDecl(2,3));//5
+console.log(addExpr(2,3));//(reference error with const or let) tdz 
+console.log(addExpr(2,3));//reference error
+//if using var will write uncaught typeError undefine not a function
 
+//declaration
+function addDecl(a,b) {
+    return a + b;
+};
+//expression
+const addExpr = function (a,b) {
+    return a + b;
+};
 
-
+//arrow
+const addArrow = (a, b) => a + b;
 
 
 
