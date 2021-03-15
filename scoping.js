@@ -113,7 +113,8 @@ const addArrow = (a, b) => a + b;
 
 
 //pitfall example
-
+//use const most of the time to declare variable and let if you need to change later
+//declare variables at top of scope and declare functions first
 if(!numProducts) deleteShoppingCart();
 //if no product delete shopping card
 //at this point product number is undefined
@@ -125,5 +126,7 @@ function deleteCartItems() {
     
 }
 
-
+var x = 1;
+let y = 2;
+const z = 3;
 
