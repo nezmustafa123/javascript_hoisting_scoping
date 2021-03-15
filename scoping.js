@@ -112,3 +112,18 @@ const addArrow = (a, b) => a + b;
 
 
 
+//pitfall example
+
+if(!numProducts) deleteShoppingCart();
+//if no product delete shopping card
+//at this point product number is undefined
+//falsy value variable var gets hoisted
+var numProducts = 10;
+
+function deleteCartItems() {
+    console.log('All products deleted!');
+    
+}
+
+
+
