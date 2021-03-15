@@ -129,4 +129,8 @@ function deleteCartItems() {
 var x = 1;
 let y = 2;
 const z = 3;
+//var variable created property in window object
+consoele.log(x === window.x);
+consoele.log(y === window.y);
+consoele.log(z === window.z);
 
