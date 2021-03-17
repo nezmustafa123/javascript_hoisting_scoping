@@ -26,3 +26,14 @@ nez.calcAge();
 //event listener; this = dom element that the handler is attached to (left side of the dot)
 
 //this keyword doesn't point to function using it and will not point to variavle environment
+
+console.log(this);
+//global scope window object without strict
+
+
+const calcAge = function(birthYear) {
+    console.log(2037- birthYear);
+    console.log(this);
+};
+calcAge(1991);
+//this keyword undefined because it's in strict mode
