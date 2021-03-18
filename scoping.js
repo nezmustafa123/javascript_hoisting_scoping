@@ -26,7 +26,7 @@ function calcAge(birthYear) {
                 return a + b;
                 //this function is block scoped
             }
-            //redifine variable inside child scope (inner)
+            //redefine variable inside child scope (inner)
             
             output = 'New output'
             //manipulateing variable from inner scope
