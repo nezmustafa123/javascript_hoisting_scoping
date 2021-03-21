@@ -83,6 +83,59 @@ console.log('Me;', me);
 
 
 
+//primitaves vs objects
+
+//each primitave value is saved into its own piece of memory in the stack
+
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, odlLastName);
+//davis williams
+
+//each primitave value saves in its own memory address in the call stack
+
+//object is reference value stored in the heap stack keeps reference to memory position to the value stored in heap
+
+const jessica = {
+    firsstName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+};
+const marriedJessica = jessica;
+//copy reference to same object
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+
+//the name davis will appear in borh objects
+//davis also in original object not just the one you copied
+//when attempting to copy the original object it didn't create new object in heap just another variable in stack holding reference to original object in heap
+//two different names for same thing
+
+//only value in stack needs to be constant
+
+//cant reassign married jessica
+
+marriedJessica = {};
+//this new object will be stores in different position on memory in stack because it's a constant you can't change it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
