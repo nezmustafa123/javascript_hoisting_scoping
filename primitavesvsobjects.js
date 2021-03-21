@@ -121,18 +121,36 @@ marriedJessica = {};
 //this new object will be stores in different position on memory in stack because it's a constant you can't change it
 
 
+//to really copy object so you can change one without changing other use object.assign
 
 
+const jessica2 = {
+    firsstName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+    family: ['Alice', 'Rob'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+//merge empty object with jessica 2
+
+jessicaCopy.lastName = 'Davis';
+//copy of iriginal object
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
 
 
+//creates a shallow copy if you have an object within an object the inner object will still be the same
 
+jessicaCopy.family.push('Jim');
+jessicaCopy.family.push('Sarah');
+//manipulate the copy but object within the object
 
-
-
-
-
-
-
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
+//now both objects have 4 members of family
+//its second level (deeply nested) so object assign didn't cope it to new object onlypoints to same object in heap
+//need a deep clone
 
 
 
